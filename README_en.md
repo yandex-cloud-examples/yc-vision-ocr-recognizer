@@ -14,7 +14,7 @@ Written in Python, it can be easily analyzed, modified, and optimized for your s
 
 2. The script retrieves the `input` folders from the bucket, generates a list of files for recognition, skipping unsupported formats and files that have already been recognized (by checking the `result` folder for the files in question). 
 
-3. Then, it downloads files from the list one by one via [direct links](https://cloud.yandex.ru/docs/storage/concepts/pre-signed-urls) and sends them to Vision for recognition.
+3. Then, it downloads files from the list one by one via [direct links](https://yandex.cloud/en/docs/storage/concepts/pre-signed-urls) and sends them to Vision for recognition.
 
 4. Vision receives the file, processes it, and returns the recognition result, which is saved to the `result` folder in both JSON and TXT formats.
 
