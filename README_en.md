@@ -10,7 +10,7 @@ Written in Python, it can be easily analyzed, modified, and optimized for your s
 <img src="img/diag-1a.jpg" width="600px" alt="Long audio file recognition" />
 <br><br>
 
-1. The user uploads images or documents in [supported formats](https://cloud.yandex.ru/docs/vision/concepts/ocr/#image-requirements) to the `input` directory (prefix) in the Object Storage bucket. 
+1. The user uploads images or documents in [supported formats](https://yandex.cloud/en/docs/vision/concepts/ocr/#image-requirements) to the `input` directory (prefix) in the Object Storage bucket. 
 
 2. The script retrieves the `input` folders from the bucket, generates a list of files for recognition, skipping unsupported formats and files that have already been recognized (by checking the `result` folder for the files in question). 
 
