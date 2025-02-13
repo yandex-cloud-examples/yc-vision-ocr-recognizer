@@ -24,7 +24,7 @@ You can run the script locally. To do this, specify the following environment va
 
 | Variable        | Description 
 | -------------     | ------------- 
-| S3_BUCKET         | [Bucket](https://cloud.yandex.ru/docs/storage/concepts/bucket) name in Object Storage
+| S3_BUCKET         | [Bucket](https://yandex.cloud/en/docs/storage/concepts/bucket) name in Object Storage
 | S3_PREFIX         | Prefix (or directory) for incoming files, e.g., `input`
 | S3_PREFIX_OUT     | Prefix (or directory) for processing results, e.g., `result`
 | S3_KEY            | [Static access key](https://cloud.yandex.ru/docs/iam/operations/sa/create-access-key) ID
