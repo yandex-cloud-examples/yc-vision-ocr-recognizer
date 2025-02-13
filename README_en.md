@@ -1,6 +1,6 @@
 # OCR Recognizer 
 
-This script retrieves images and PDF documents from an [Object Storage](https://cloud.yandex.ru/services/storage) bucket, sends them to [Vision](https://cloud.yandex.ru/services/vision) for recognition, and then saves the recognition results back to the Object Storage [bucket](https://cloud.yandex.ru/docs/storage/concepts/bucket).
+This script retrieves images and PDF documents from an [Object Storage](https://[cloud.yandex.ru/services/storage](https://yandex.cloud/en/services/storage)) bucket, sends them to [Vision](https://yandex.cloud/en/services/vision) for recognition, and then saves the recognition results back to the Object Storage [bucket](https://yandex.cloud/en/docs/storage/concepts/bucket).
 
 Written in Python, it can be easily analyzed, modified, and optimized for your specific use case.
 <br><br>
