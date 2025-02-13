@@ -34,7 +34,7 @@ You can run the script locally. To do this, specify the following environment va
 
 You may want to separate files for processing and the processing results by using different prefixes (subfolders). Failing to do so may lead to unpredictable behavior.
 
-To generate both an S3 key and an API key, [create a service account](https://cloud.yandex.ru/docs/iam/operations/sa/create) and [assign](https://cloud.yandex.ru/docs/iam/operations/sa/assign-role-for-sa) the `storage.editor` and `ai.vision.user` roles.
+To generate both an S3 key and an API key, [create a service account](https://yandex.cloud/en/docs/iam/operations/sa/create-access-key) and [assign](https://yandex.cloud/en/docs/iam/operations/sa/assign-role-for-sa) the `storage.editor` and `ai.vision.user` roles.
 <br><br>
 
 ## Use cases
