@@ -30,7 +30,7 @@ You can run the script locally. To do this, specify the following environment va
 | S3_KEY            | [Static access key](https://yandex.cloud/en/docs/iam/operations/sa/create-access-key) ID
 | S3_SECRET         | [Static access key](https://yandex.cloud/en/docs/iam/operations/sa/create-access-key) secret
 | API_SECRET        | [API key](https://yandex.cloud/en/docs/iam/operations/api-key/create) secret
-| FOLDER_ID         | [Folder ID](https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id)
+| FOLDER_ID         | [Folder ID](https://yandex.cloud/en/docs/resource-manager/operations/folder/get-id)
 
 You may want to separate files for processing and the processing results by using different prefixes (subfolders). Failing to do so may lead to unpredictable behavior.
 
