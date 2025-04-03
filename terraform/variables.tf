@@ -23,4 +23,5 @@ variable "provider_key_file" {
 variable "container_image" {
   description = "OCR Recognizer container image"
   type        = string
+  default     = "cr.yandex/sol/ml-ai/ocr-recognizer/ocr-recognizer:v1.0.0"
 }
