@@ -20,7 +20,7 @@ Written in Python, it can be easily analyzed, modified, and optimized for your s
 
 ## Usage
 
-Ready to use [Terraform module](example/) can deployed, and all the required resources will be created:
+Ready to use [Terraform module](example/) can be deployed, and all the required resources will be created:
 - Serverless container
 - Triggers
 - Object storage bucket
