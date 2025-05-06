@@ -1,3 +1,38 @@
+
+variable "cloud_id" {
+  type = string
+}
+
+
+variable "folder_id" {
+  type = string
+}
+
+
+variable "zone" {
+  type = string
+}
+
+
+locals {
+  container_image  = "cr.yandex/sol/ml-ai/ocr-recognizer/ocr-recognizer:v1.0.0"
+}
+
+
+terraform {
+  required_providers {
+    yandex = {
+      source  = "yandex-cloud/yandex"
+    }
+  }
+}
+
+provider "yandex" {
+  zone      = var.zone
+}
+
+
+
 # Function Source
 resource "random_string" "default" {
   length  = 4
@@ -80,6 +115,19 @@ resource "yandex_storage_bucket" "ocr-bucket" {
   depends_on = [yandex_resourcemanager_folder_iam_member.ocr-sa-storage]
 }
 
+resource "yandex_storage_object" "test-object" {
+  access_key = yandex_iam_service_account_static_access_key.sa-static-key.access_key
+  secret_key = yandex_iam_service_account_static_access_key.sa-static-key.secret_key
+  bucket     = yandex_storage_bucket.ocr-bucket.id
+  content = "." 
+  key        = "input/"
+}
+
+
+
+
+
+
 # OCR
 resource "yandex_serverless_container" "ocr" {
   name               = "ocr-recognizer-${random_string.default.result}"
@@ -98,7 +146,7 @@ resource "yandex_serverless_container" "ocr" {
   }
 
   image {
-    url = var.container_image
+    url = local.container_image
   }
 
   mounts {
@@ -147,3 +195,10 @@ resource "yandex_function_trigger" "ocr-bucket" {
     delete       = false
   }
 }
+
+output "bucket_id" {
+  value = yandex_storage_bucket.ocr-bucket.id
+}
+
+
+
