@@ -1,23 +1,18 @@
-
 variable "cloud_id" {
   type = string
 }
-
 
 variable "folder_id" {
   type = string
 }
 
-
 variable "zone" {
   type = string
 }
 
-
 locals {
   container_image  = "cr.yandex/sol/ml-ai/ocr-recognizer/ocr-recognizer:v1.0.0"
 }
-
 
 terraform {
   required_providers {
@@ -30,8 +25,6 @@ terraform {
 provider "yandex" {
   zone      = var.zone
 }
-
-
 
 # Function Source
 resource "random_string" "default" {
@@ -115,18 +108,14 @@ resource "yandex_storage_bucket" "ocr-bucket" {
   depends_on = [yandex_resourcemanager_folder_iam_member.ocr-sa-storage]
 }
 
-resource "yandex_storage_object" "test-object" {
+# Object
+resource "yandex_storage_object" "null-object" {
   access_key = yandex_iam_service_account_static_access_key.sa-static-key.access_key
   secret_key = yandex_iam_service_account_static_access_key.sa-static-key.secret_key
   bucket     = yandex_storage_bucket.ocr-bucket.id
   content = "." 
   key        = "input/"
 }
-
-
-
-
-
 
 # OCR
 resource "yandex_serverless_container" "ocr" {
