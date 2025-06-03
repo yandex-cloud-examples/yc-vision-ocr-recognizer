@@ -33,6 +33,7 @@
 
 Скрипт может быть запущен локально:
 ```
+pip install -r src/requirements.txt
 python src/async_ocr_client.py --api-key xxx --image-path file.png
 ```
 
